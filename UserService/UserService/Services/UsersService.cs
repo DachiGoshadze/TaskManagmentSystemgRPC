@@ -1,6 +1,9 @@
-﻿using System.Security.Cryptography;
+﻿using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
+using FileSystemAppBackend.Services;
 using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using UserService.Data;
 using UserService.Data.Entities;
@@ -10,10 +13,14 @@ namespace UserService.Services
     public class UsersService : Users.UsersBase
     {
         private readonly ApplicationContext _db;
-        public UsersService(ApplicationContext db)
+        private readonly JwtTokenGenerator _jwtTokenGenerator;
+
+        public UsersService(ApplicationContext db, JwtTokenGenerator jwtTokenGenerator)
         {
             _db = db;
+            _jwtTokenGenerator = jwtTokenGenerator;
         }
+
         private static string GetHashedPassword(string password)
         {
             using (var sha256 = SHA256.Create())
@@ -28,7 +35,9 @@ namespace UserService.Services
                 return builder.ToString();
             }
         }
-        public override async Task<UserInfoResponse> AddUser(AddNewUserRequest addNewUserRequest, ServerCallContext context)
+
+        public override async Task<UserInfoResponse> AddUser(AddNewUserRequest addNewUserRequest,
+            ServerCallContext context)
         {
             if (string.IsNullOrEmpty(addNewUserRequest.Username) || string.IsNullOrEmpty(addNewUserRequest.Username) ||
                 string.IsNullOrEmpty(addNewUserRequest.Username))
@@ -46,27 +55,55 @@ namespace UserService.Services
             await _db.SaveChangesAsync();
             return new UserInfoResponse()
             {
-                Id = user.id.ToString(),
+                Id = user.id,
+                Username = user.username,
+                Email = user.email
+            };
+        }
+        [Authorize]
+        public override async Task<UserInfoResponse> GetUserInfo(GetUserInfoRequest request, ServerCallContext context)
+        {
+            if (request.Id == 0)
+            {
+                throw new RpcException(new Status(StatusCode.InvalidArgument, "User Id Must Be Greater Then 0"));
+            }
+
+            var user = await _db.Users.FirstOrDefaultAsync(u => u.id == request.Id);
+            if (user == null) throw new RpcException(new Status(StatusCode.NotFound, "User With This Id Not Exists"));
+
+            return new UserInfoResponse()
+            {
+                Id = user.id,
                 Username = user.username,
                 Email = user.email
             };
         }
 
-        public override async Task<UserInfoResponse> GetUserInfo(GetUserInfoRequest request, ServerCallContext context)
+        public override async Task<UserSignInResponse> SingInUser(UserSignInRequest request, ServerCallContext context)
         {
-            if (string.IsNullOrEmpty(request.Id))
+            if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
             {
                 throw new RpcException(new Status(StatusCode.InvalidArgument, "Some Request Arguments Are Null"));
             }
 
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.id.ToString() == request.Id);
-            if(user == null) throw new RpcException(new Status(StatusCode.NotFound, "User With This Id Not Exists"));
-            
-            return new UserInfoResponse()
+            var hashedPassword = GetHashedPassword(request.Password);
+            var user = await _db.Users.FirstOrDefaultAsync(
+                u => u.email == request.Email && u.password == hashedPassword);
+            if (user == null) throw new RpcException(new Status(StatusCode.NotFound, "User With This Id Not Exists"));
+            var claims = new List<Claim>
             {
-                Id = user.id.ToString(),
+                new Claim("id", user.id.ToString()),
+                new Claim("userName", user.username!),
+                new Claim("email", user.email!),
+            };
+
+            var jwtToken = _jwtTokenGenerator.GenerateJWTtoken(new List<Claim>(claims));
+            return new UserSignInResponse()
+            {
+                Id = user.id,
                 Username = user.username,
-                Email = user.email
+                Email = user.email,
+                JwtToken = jwtToken
             };
         }
     }

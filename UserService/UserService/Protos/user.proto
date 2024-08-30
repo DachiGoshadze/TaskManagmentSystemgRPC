@@ -10,6 +10,8 @@ service Users {
   rpc AddUser (AddNewUserRequest) returns (UserInfoResponse);
 
   rpc GetUserInfo (GetUserInfoRequest) returns (UserInfoResponse);
+  
+  rpc SingInUser (UserSignInRequest)  returns (UserSignInResponse);
 }
 
 
@@ -20,11 +22,23 @@ message AddNewUserRequest {
 }
 
 message GetUserInfoRequest {
-	string id = 1;
+	int32 id = 1;
+}
+
+message UserSignInRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message UserSignInResponse {
+  int32 id = 1;
+  string username = 2;
+  string email = 3;
+  string jwtToken = 4;
 }
 
 message UserInfoResponse {
-  string id = 1;
+  int32 id = 1;
 	string username = 2;
 	string email = 3;
 }

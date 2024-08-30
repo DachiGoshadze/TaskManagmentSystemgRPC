@@ -51,6 +51,10 @@ namespace UserService {
     static readonly grpc::Marshaller<global::UserService.UserInfoResponse> __Marshaller_user_UserInfoResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.UserInfoResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::UserService.GetUserInfoRequest> __Marshaller_user_GetUserInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.GetUserInfoRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::UserService.UserSignInRequest> __Marshaller_user_UserSignInRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.UserSignInRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::UserService.UserSignInResponse> __Marshaller_user_UserSignInResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::UserService.UserSignInResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::UserService.AddNewUserRequest, global::UserService.UserInfoResponse> __Method_AddUser = new grpc::Method<global::UserService.AddNewUserRequest, global::UserService.UserInfoResponse>(
@@ -67,6 +71,14 @@ namespace UserService {
         "GetUserInfo",
         __Marshaller_user_GetUserInfoRequest,
         __Marshaller_user_UserInfoResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::UserService.UserSignInRequest, global::UserService.UserSignInResponse> __Method_SingInUser = new grpc::Method<global::UserService.UserSignInRequest, global::UserService.UserSignInResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SingInUser",
+        __Marshaller_user_UserSignInRequest,
+        __Marshaller_user_UserSignInResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -90,6 +102,12 @@ namespace UserService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::UserService.UserSignInResponse> SingInUser(global::UserService.UserSignInRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -99,7 +117,8 @@ namespace UserService {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_AddUser, serviceImpl.AddUser)
-          .AddMethod(__Method_GetUserInfo, serviceImpl.GetUserInfo).Build();
+          .AddMethod(__Method_GetUserInfo, serviceImpl.GetUserInfo)
+          .AddMethod(__Method_SingInUser, serviceImpl.SingInUser).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -111,6 +130,7 @@ namespace UserService {
     {
       serviceBinder.AddMethod(__Method_AddUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserService.AddNewUserRequest, global::UserService.UserInfoResponse>(serviceImpl.AddUser));
       serviceBinder.AddMethod(__Method_GetUserInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserService.GetUserInfoRequest, global::UserService.UserInfoResponse>(serviceImpl.GetUserInfo));
+      serviceBinder.AddMethod(__Method_SingInUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::UserService.UserSignInRequest, global::UserService.UserSignInResponse>(serviceImpl.SingInUser));
     }
 
   }

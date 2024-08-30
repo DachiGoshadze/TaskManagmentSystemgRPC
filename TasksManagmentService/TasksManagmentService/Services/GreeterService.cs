@@ -1,7 +1,7 @@
 using Grpc.Core;
-using UserService;
+using TasksManagmentService;
 
-namespace UserService.Services
+namespace TasksManagmentService.Services
 {
     public class GreeterService : Greeter.GreeterBase
     {
