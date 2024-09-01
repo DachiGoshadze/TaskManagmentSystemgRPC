@@ -9,6 +9,7 @@ namespace TasksManagmentService.Data
         public DbSet<Space> Spaces => Set<Space>();
         public DbSet<TaskAssignment> Tasks => Set<TaskAssignment>();
         public DbSet<Status> Statuses => Set<Status>();
+        public DbSet<UserSpaces> UserSpaces => Set<UserSpaces>();
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
            : base(options)
         {

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TasksManagmentService.Data;
 
@@ -11,9 +12,10 @@ using TasksManagmentService.Data;
 namespace TasksManagmentService.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20240901142437_UserSpacesTableInit")]
+    partial class UserSpacesTableInit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,12 +102,6 @@ namespace TasksManagmentService.Migrations
 
             modelBuilder.Entity("TasksManagmentService.Data.Entities.UserSpaces", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -115,8 +111,6 @@ namespace TasksManagmentService.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    b.HasKey("Id");
 
                     b.ToTable("UserSpaces");
                 });

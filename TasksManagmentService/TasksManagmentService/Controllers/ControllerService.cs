@@ -53,5 +53,9 @@ namespace TasksManagmentService.Controllers
         {
             return await _taskService.RemoveTask(request, context);
         }
+        public override async Task<AddUserToSpaceResponse> AddUserToSpace(AddUserToSpaceRequest request, ServerCallContext context)
+        {
+            return await _spaceService.AddUserToSpace(request, context);
+        }
     }
 }

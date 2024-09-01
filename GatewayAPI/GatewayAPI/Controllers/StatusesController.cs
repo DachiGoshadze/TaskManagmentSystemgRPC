@@ -1,45 +1,28 @@
 ﻿using GatewayAPI.HelperServices;
 using Grpc.Core;
-using Grpc.Net.Client;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TasksManagmentService;
 using UserService;
 
 namespace GatewayAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : Controller
+    [Authorize]
+    public class StatusesController : Controller
     {
-        private readonly Users.UsersClient _client;
-        public UserController(GrpcConnectorService grpcConnectorService) 
+        private readonly TaskManagementService.TaskManagementServiceClient _client;
+        public StatusesController(GrpcConnectorService grpcConnectorService)
         {
-            _client = grpcConnectorService.GetUserServiceConnection();
+            _client = grpcConnectorService.GetTaskManagmentServiceConnection();
         }
-        [HttpPost("SingIn")]
-        public async Task<IActionResult> SignInUser([FromBody] UserSignInRequest request)
+        [HttpGet("GetStatusInfo")]
+        public async Task<IActionResult> GetStatusInfo(GetStatusInfoRequest request)
         {
             try
             {
-                var response = await _client.SingInUserAsync(request, new Grpc.Core.Metadata());
-                return Ok(response);
-            } catch (RpcException ex)
-            {
-                return ex.StatusCode switch
-                {
-                    Grpc.Core.StatusCode.NotFound => NotFound(ex.Status.Detail),
-                    Grpc.Core.StatusCode.Unauthenticated => Unauthorized(ex.Status.Detail),
-                    Grpc.Core.StatusCode.InvalidArgument => BadRequest(ex.Status.Detail),
-                    _ => StatusCode((int)ex.StatusCode, ex.Status.Detail)
-                };
-            }
-        }
-        [HttpPut("SingUp")]
-        public async Task<IActionResult> SignUpUser([FromBody] AddNewUserRequest request)
-        {
-            try
-            {
-                var response = await _client.AddUserAsync(request, new Grpc.Core.Metadata());
+                var response = await _client.GetStatusInfoAsync(request, new Metadata { });
                 return Ok(response);
             }
             catch (RpcException ex)
@@ -53,13 +36,12 @@ namespace GatewayAPI.Controllers
                 };
             }
         }
-        [Authorize]
-        [HttpGet("GetUserInfo")]
-        public async Task<IActionResult> GetUserInfo(GetUserInfoRequest request)
+        [HttpPost("AddNewStatus")]
+        public async Task<IActionResult> AddNewStatus(AddStatusRequest request)
         {
             try
             {
-                var response = await _client.GetUserInfoAsync(request, new Grpc.Core.Metadata());
+                var response = await _client.AddNewStatusAsync(request, new Metadata { });
                 return Ok(response);
             }
             catch (RpcException ex)
@@ -73,13 +55,12 @@ namespace GatewayAPI.Controllers
                 };
             }
         }
-        [Authorize]
-        [HttpGet("CheckUserExists")]
-        public async Task<IActionResult> CheckUser(UserExistsRequest request)
+        [HttpPost("AddDefaultStatus")]
+        public async Task<IActionResult> AddDefaultStatus(AddDefaultStatusRequest request)
         {
             try
             {
-                var response = await _client.CheckUserExistsAsync(request, new Grpc.Core.Metadata());
+                var response = await _client.AddDefaultStatusAsync(request, new Metadata { });
                 return Ok(response);
             }
             catch (RpcException ex)

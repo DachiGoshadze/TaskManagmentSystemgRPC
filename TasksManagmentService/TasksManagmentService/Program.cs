@@ -51,8 +51,8 @@ app.Run();
 
 public static class AuthOptions
 {
-    public const string ISSUER = "UserService"; 
-    public const string AUDIENCE = "UserServiceClient"; 
+    public const string ISSUER = "TaskManagementSystemGrpc"; 
+    public const string AUDIENCE = "TaskManagementSystemGrpcClient"; 
     const string KEY = "mysupersecret_secretsecretsecretkey!123";  
     public static SymmetricSecurityKey GetSymmetricSecurityKey() =>
         new SymmetricSecurityKey(Encoding.UTF8.GetBytes(KEY));

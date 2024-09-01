@@ -77,6 +77,10 @@ namespace TasksManagmentService {
     static readonly grpc::Marshaller<global::TasksManagmentService.AddDefaultStatusRequest> __Marshaller_taskManagement_AddDefaultStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddDefaultStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TasksManagmentService.AddDefaultStatusResponse> __Marshaller_taskManagement_AddDefaultStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddDefaultStatusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TasksManagmentService.AddUserToSpaceRequest> __Marshaller_taskManagement_AddUserToSpaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddUserToSpaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TasksManagmentService.AddUserToSpaceResponse> __Marshaller_taskManagement_AddUserToSpaceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddUserToSpaceResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::TasksManagmentService.CreateNewSpaceRequest, global::TasksManagmentService.CreateNewSpaceResponse> __Method_CreateNewSpace = new grpc::Method<global::TasksManagmentService.CreateNewSpaceRequest, global::TasksManagmentService.CreateNewSpaceResponse>(
@@ -142,6 +146,14 @@ namespace TasksManagmentService {
         __Marshaller_taskManagement_AddDefaultStatusRequest,
         __Marshaller_taskManagement_AddDefaultStatusResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::TasksManagmentService.AddUserToSpaceRequest, global::TasksManagmentService.AddUserToSpaceResponse> __Method_AddUserToSpace = new grpc::Method<global::TasksManagmentService.AddUserToSpaceRequest, global::TasksManagmentService.AddUserToSpaceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddUserToSpace",
+        __Marshaller_taskManagement_AddUserToSpaceRequest,
+        __Marshaller_taskManagement_AddUserToSpaceResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -200,6 +212,12 @@ namespace TasksManagmentService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::TasksManagmentService.AddUserToSpaceResponse> AddUserToSpace(global::TasksManagmentService.AddUserToSpaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -215,7 +233,8 @@ namespace TasksManagmentService {
           .AddMethod(__Method_GetTaskInfo, serviceImpl.GetTaskInfo)
           .AddMethod(__Method_GetStatusInfo, serviceImpl.GetStatusInfo)
           .AddMethod(__Method_RemoveTask, serviceImpl.RemoveTask)
-          .AddMethod(__Method_AddDefaultStatus, serviceImpl.AddDefaultStatus).Build();
+          .AddMethod(__Method_AddDefaultStatus, serviceImpl.AddDefaultStatus)
+          .AddMethod(__Method_AddUserToSpace, serviceImpl.AddUserToSpace).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -233,6 +252,7 @@ namespace TasksManagmentService {
       serviceBinder.AddMethod(__Method_GetStatusInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TasksManagmentService.GetStatusInfoRequest, global::TasksManagmentService.GetStatusInfoResponse>(serviceImpl.GetStatusInfo));
       serviceBinder.AddMethod(__Method_RemoveTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TasksManagmentService.RemoveTaskRequest, global::TasksManagmentService.RemoveTaskResponse>(serviceImpl.RemoveTask));
       serviceBinder.AddMethod(__Method_AddDefaultStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TasksManagmentService.AddDefaultStatusRequest, global::TasksManagmentService.AddDefaultStatusResponse>(serviceImpl.AddDefaultStatus));
+      serviceBinder.AddMethod(__Method_AddUserToSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TasksManagmentService.AddUserToSpaceRequest, global::TasksManagmentService.AddUserToSpaceResponse>(serviceImpl.AddUserToSpace));
     }
 
   }

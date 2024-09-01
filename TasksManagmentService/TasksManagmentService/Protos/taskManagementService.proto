@@ -13,6 +13,7 @@ service TaskManagementService {
   rpc GetStatusInfo (GetStatusInfoRequest) returns (GetStatusInfoResponse);
   rpc RemoveTask (RemoveTaskRequest) returns (RemoveTaskResponse);
   rpc AddDefaultStatus (AddDefaultStatusRequest) returns (AddDefaultStatusResponse);
+  rpc AddUserToSpace (AddUserToSpaceRequest) returns (AddUserToSpaceResponse);
 }
 
 message CreateNewSpaceRequest {
@@ -78,5 +79,12 @@ message AddDefaultStatusRequest {
     string statusName = 1;
 }
 message AddDefaultStatusResponse {
+    bool result = 1;
+}
+message AddUserToSpaceRequest {
+    int32 spaceId = 1;
+    int32 userId = 2;
+}
+message AddUserToSpaceResponse {
     bool result = 1;
 }

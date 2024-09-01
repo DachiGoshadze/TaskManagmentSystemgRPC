@@ -3,43 +3,31 @@ using Grpc.Core;
 using Grpc.Net.Client;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using UserService;
+using TasksManagmentService;
 
 namespace GatewayAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : Controller
+    [Authorize]
+    public class SpacesController : Controller
     {
-        private readonly Users.UsersClient _client;
-        public UserController(GrpcConnectorService grpcConnectorService) 
+        private readonly TaskManagementService.TaskManagementServiceClient _client;
+        public SpacesController(GrpcConnectorService grpcConnectorService)
         {
-            _client = grpcConnectorService.GetUserServiceConnection();
+            _client = grpcConnectorService.GetTaskManagmentServiceConnection();
         }
-        [HttpPost("SingIn")]
-        public async Task<IActionResult> SignInUser([FromBody] UserSignInRequest request)
+        [HttpPost("CreateSpace")]
+        public async Task<IActionResult> CreateSpace([FromBody] CreateNewSpaceRequest request)
         {
             try
             {
-                var response = await _client.SingInUserAsync(request, new Grpc.Core.Metadata());
-                return Ok(response);
-            } catch (RpcException ex)
-            {
-                return ex.StatusCode switch
+                var token = HttpContext.Request.Headers["Authorization"].ToString();
+                var metadata = new Metadata
                 {
-                    Grpc.Core.StatusCode.NotFound => NotFound(ex.Status.Detail),
-                    Grpc.Core.StatusCode.Unauthenticated => Unauthorized(ex.Status.Detail),
-                    Grpc.Core.StatusCode.InvalidArgument => BadRequest(ex.Status.Detail),
-                    _ => StatusCode((int)ex.StatusCode, ex.Status.Detail)
+                    { "Authorization", token }
                 };
-            }
-        }
-        [HttpPut("SingUp")]
-        public async Task<IActionResult> SignUpUser([FromBody] AddNewUserRequest request)
-        {
-            try
-            {
-                var response = await _client.AddUserAsync(request, new Grpc.Core.Metadata());
+                var response = await _client.CreateNewSpaceAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)
@@ -53,13 +41,17 @@ namespace GatewayAPI.Controllers
                 };
             }
         }
-        [Authorize]
-        [HttpGet("GetUserInfo")]
-        public async Task<IActionResult> GetUserInfo(GetUserInfoRequest request)
+        [HttpGet("GetSpaceInfo")]
+        public async Task<IActionResult> GetSpaceInfo([FromQuery] GetSpaceInfoRequest request)
         {
             try
             {
-                var response = await _client.GetUserInfoAsync(request, new Grpc.Core.Metadata());
+                var token = HttpContext.Request.Headers["Authorization"].ToString();
+                var metadata = new Metadata
+                {
+                    { "Authorization", token }
+                };
+                var response = await _client.GetSpaceInfoAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)
@@ -73,13 +65,17 @@ namespace GatewayAPI.Controllers
                 };
             }
         }
-        [Authorize]
-        [HttpGet("CheckUserExists")]
-        public async Task<IActionResult> CheckUser(UserExistsRequest request)
+        [HttpGet("AddUserToSpace")]
+        public async Task<IActionResult> AddUserToSpace(AddUserToSpaceRequest request)
         {
             try
             {
-                var response = await _client.CheckUserExistsAsync(request, new Grpc.Core.Metadata());
+                var token = HttpContext.Request.Headers["Authorization"].ToString();
+                var metadata = new Metadata
+                {
+                    { "Authorization", token }
+                };
+                var response = await _client.AddUserToSpaceAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)

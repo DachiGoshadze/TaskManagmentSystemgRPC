@@ -77,6 +77,10 @@ namespace TasksManagmentService {
     static readonly grpc::Marshaller<global::TasksManagmentService.AddDefaultStatusRequest> __Marshaller_taskManagement_AddDefaultStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddDefaultStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TasksManagmentService.AddDefaultStatusResponse> __Marshaller_taskManagement_AddDefaultStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddDefaultStatusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TasksManagmentService.AddUserToSpaceRequest> __Marshaller_taskManagement_AddUserToSpaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddUserToSpaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TasksManagmentService.AddUserToSpaceResponse> __Marshaller_taskManagement_AddUserToSpaceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TasksManagmentService.AddUserToSpaceResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::TasksManagmentService.CreateNewSpaceRequest, global::TasksManagmentService.CreateNewSpaceResponse> __Method_CreateNewSpace = new grpc::Method<global::TasksManagmentService.CreateNewSpaceRequest, global::TasksManagmentService.CreateNewSpaceResponse>(
@@ -141,6 +145,14 @@ namespace TasksManagmentService {
         "AddDefaultStatus",
         __Marshaller_taskManagement_AddDefaultStatusRequest,
         __Marshaller_taskManagement_AddDefaultStatusResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::TasksManagmentService.AddUserToSpaceRequest, global::TasksManagmentService.AddUserToSpaceResponse> __Method_AddUserToSpace = new grpc::Method<global::TasksManagmentService.AddUserToSpaceRequest, global::TasksManagmentService.AddUserToSpaceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddUserToSpace",
+        __Marshaller_taskManagement_AddUserToSpaceRequest,
+        __Marshaller_taskManagement_AddUserToSpaceResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -334,6 +346,26 @@ namespace TasksManagmentService {
       public virtual grpc::AsyncUnaryCall<global::TasksManagmentService.AddDefaultStatusResponse> AddDefaultStatusAsync(global::TasksManagmentService.AddDefaultStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddDefaultStatus, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TasksManagmentService.AddUserToSpaceResponse AddUserToSpace(global::TasksManagmentService.AddUserToSpaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddUserToSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TasksManagmentService.AddUserToSpaceResponse AddUserToSpace(global::TasksManagmentService.AddUserToSpaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddUserToSpace, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TasksManagmentService.AddUserToSpaceResponse> AddUserToSpaceAsync(global::TasksManagmentService.AddUserToSpaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddUserToSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TasksManagmentService.AddUserToSpaceResponse> AddUserToSpaceAsync(global::TasksManagmentService.AddUserToSpaceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddUserToSpace, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

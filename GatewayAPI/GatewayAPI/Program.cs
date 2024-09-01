@@ -72,6 +72,7 @@ builder.Services.AddCors(options =>
         });
 });
 builder.Services.AddScoped<JwtTokenGenerator>();
+builder.Services.AddScoped<GrpcConnectorService>();
 
 var app = builder.Build();
 app.UseCors(MyAllowSpecificOrigins);
@@ -97,8 +98,8 @@ app.Run();
 
 public static class AuthOptions
 {
-    public const string ISSUER = "ShopAppServer";
-    public const string AUDIENCE = "ShopAppClient";
+    public const string ISSUER = "TaskManagementSystemGrpc";
+    public const string AUDIENCE = "TaskManagementSystemGrpcClient";
     const string KEY = "mysupersecret_secretsecretsecretkey!123";
     public static SymmetricSecurityKey GetSymmetricSecurityKey() =>
         new SymmetricSecurityKey(Encoding.UTF8.GetBytes(KEY));

@@ -36,6 +36,7 @@ public class SpaceService
             };
             await _db.Spaces.AddAsync(space);
             await _db.SaveChangesAsync();
+            await AddUserToSpace(new AddUserToSpaceRequest() { SpaceId = space.Id, UserId = space.creatorId }, context);
             return new CreateNewSpaceResponse()
             {
                 NewSpaceId = space.Id
@@ -53,19 +54,19 @@ public class SpaceService
         if(space == null)
             throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound,
             $"Space With Id {request.SpaceId} Not Found"));
-        var tasksResponse = space.Tasks.Select(task => new GetTaskInfoResponse()
+        var tasksResponse = space.Tasks != null ? space.Tasks.Select(task => new GetTaskInfoResponse()
         {
             TaskName = task.Name,
             TaskDescription = task.Description,
             StatusId = task.StatusId,
             TaskId = task.Id,
             SpaceId = task.SpaceId
-        }).ToList();
-        var StatusesResponse = space.Statuses.Select(status => new GetStatusInfoResponse()
+        }).ToList() : new List<GetTaskInfoResponse>();
+        var StatusesResponse = space.Statuses != null ? space.Statuses.Select(status => new GetStatusInfoResponse()
         {
             StatusId = status.Id,
             StatusName = status.Name
-        }).ToList();
+        }).ToList() : new List<GetStatusInfoResponse>();
         return new GetSpaceInfoResponse()
         {
             SpaceId = space.Id,
@@ -74,5 +75,31 @@ public class SpaceService
             Tasks = { tasksResponse },
             Statuses = { StatusesResponse }
         };
+    }
+    public async Task<AddUserToSpaceResponse> AddUserToSpace(AddUserToSpaceRequest request, ServerCallContext context)
+    {
+        if (request.SpaceId == 0 || request.UserId == 0)
+            throw new RpcException(new Grpc.Core.Status(StatusCode.InvalidArgument, "InvalidArguments"));
+        if(_db.Spaces.Any(s => s.Id == request.SpaceId) 
+            && _client.CheckUserExists(new UserExistsRequest() { Id = request.UserId }).Found)
+        {
+            var userToSpace = new UserSpaces()
+            {
+                SpaceId = request.SpaceId,
+                UserId = request.UserId
+            };
+            if(_db.Spaces.FirstOrDefault(s => s.Id == userToSpace.SpaceId)!.creatorId == userToSpace.UserId)
+            {
+                userToSpace.Role = "admin";
+            }
+            await _db.UserSpaces.AddAsync(userToSpace);
+            await _db.SaveChangesAsync();
+            return new AddUserToSpaceResponse()
+            {
+                Result = true
+            };
+        }
+        throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound,
+            $"Space With Id {request.SpaceId} or User with Id {request.UserId} Not Found"));
     }
 }
