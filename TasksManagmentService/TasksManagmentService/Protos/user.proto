@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "UserService";
+
+package user;
+
+
+service Users {
+
+  rpc AddUser (AddNewUserRequest) returns (UserInfoResponse);
+
+  rpc GetUserInfo (GetUserInfoRequest) returns (UserInfoResponse);
+  
+  rpc SingInUser (UserSignInRequest)  returns (UserSignInResponse);
+}
+
+
+message AddNewUserRequest {
+  string username = 1;
+  string email = 2;
+  string password = 3;
+}
+
+message GetUserInfoRequest {
+	int32 id = 1;
+}
+
+message UserSignInRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message UserSignInResponse {
+  int32 id = 1;
+  string username = 2;
+  string email = 3;
+  string jwtToken = 4;
+}
+
+message UserInfoResponse {
+  int32 id = 1;
+	string username = 2;
+	string email = 3;
+}
+

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option csharp_namespace = "TasksManagmentService";
 
-package greet;
+package taskManagementService;
 
 // The greeting service definition.
 service Greeter {
