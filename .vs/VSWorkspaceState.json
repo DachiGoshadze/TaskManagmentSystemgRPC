@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\UserService",
-    "\\UserService\\UserService",
-    "\\UserService\\UserService\\Services"
+    ""
   ],
-  "SelectedNode": "\\UserService\\UserService\\UserService.csproj",
+  "SelectedNode": "\\TasksManagmentService.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -106,5 +106,17 @@ namespace UserService.Services
                 JwtToken = jwtToken
             };
         }
+        public override async Task<UserExistsResponse> CheckUserExists(UserExistsRequest request, ServerCallContext context)
+        {
+            if (request.Id == 0)
+            {
+                throw new RpcException(new Status(StatusCode.InvalidArgument, "Some Request Arguments Are Null"));
+            }
+            var result = await _db.Users.AnyAsync(u => u.id == request.Id);
+            return new UserExistsResponse()
+            {
+                Found = result
+            };
+        }
     }
 }

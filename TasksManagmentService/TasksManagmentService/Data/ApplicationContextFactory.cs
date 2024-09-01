@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using UserService.Data;
+using TasksManagmentService.Data;
 
 namespace ShopApp.DB
 {

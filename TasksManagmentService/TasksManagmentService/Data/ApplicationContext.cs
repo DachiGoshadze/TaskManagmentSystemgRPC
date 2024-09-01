@@ -1,11 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UserService.Data.Entities;
+using TasksManagmentService.Data.Entities;
 
-namespace UserService.Data
+
+namespace TasksManagmentService.Data
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<User> Users => Set<User>(); 
+        public DbSet<Space> Spaces => Set<Space>();
+        public DbSet<TaskAssignment> Tasks => Set<TaskAssignment>();
+        public DbSet<Status> Statuses => Set<Status>();
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
            : base(options)
         {
@@ -13,7 +16,14 @@ namespace UserService.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-UGPA4P6\\SQLEXPRESS;Database=TaskManagmentSystem;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-UGPA4P6\\SQLEXPRESS;Database=TaskManagmentSystem1;Trusted_Connection=True;");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TaskAssignment>()
+                .HasKey(t => t.Id);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

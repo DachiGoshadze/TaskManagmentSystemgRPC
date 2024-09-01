@@ -1,0 +1,2 @@
+obj\Release\net6.0\Protos/TaskManagementService.cs \
+obj\Release\net6.0\Protos/TaskManagementServiceGrpc.cs: Protos/taskManagementService.proto

@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/TaskManagementService.cs \
+obj\Debug\net6.0\Protos/TaskManagementServiceGrpc.cs: Protos/taskManagementService.proto
