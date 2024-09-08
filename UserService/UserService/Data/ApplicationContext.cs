@@ -3,7 +3,7 @@ using UserService.Data.Entities;
 
 namespace UserService.Data
 {
-    public class ApplicationContext : DbContext
+    public sealed class ApplicationContext : DbContext
     {
         public DbSet<User> Users => Set<User>(); 
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
@@ -13,7 +13,10 @@ namespace UserService.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-UGPA4P6\\SQLEXPRESS;Database=TaskManagmentSystem;Trusted_Connection=True;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=DACHI;Database=TaskManagmentUserSystem;Trusted_Connection=True;");
+            }
         }
     }
 }

@@ -17,18 +17,17 @@ service TaskManagementService {
 }
 
 message CreateNewSpaceRequest {
-  int32 creatorUserId = 1;
-  string spaceName = 2;
+  string spaceName = 1;
 }
 message CreateNewSpaceResponse {
-    int32 newSpaceId = 1;
+  int32 newSpaceId = 1;
 }
 message AddStatusRequest {
-    int32 spaceId = 1;
-    string statusName = 2;
+  int32 spaceId = 1;
+  string statusName = 2;
 }
 message AddStatusResponse {
-    int32 statusId = 1;
+  int32 statusId = 1;
 }
 message AddNewTaskRequest {
   int32 spaceId = 1;
@@ -43,31 +42,31 @@ message AddNewTaskResponse {
   int32 statusId = 4;
 }
 message GetStatusInfoRequest {
-    int32 statusId = 1;
+  int32 statusId = 1;
 }
 message GetStatusInfoResponse {
-    int32 statusId = 1;
-    string statusName = 2;
+  int32 statusId = 1;
+  string statusName = 2;
 }
 message GetTaskInfoRequest {
-    int32 taskId = 1; 
+  int32 taskId = 1;
 }
 message GetTaskInfoResponse {
-    int32 taskId = 1;
-    string taskName = 2;
-    string taskDescription = 3;
-    int32 statusId = 4;
-    int32 spaceId = 5;
+  int32 taskId = 1;
+  string taskName = 2;
+  string taskDescription = 3;
+  int32 statusId = 4;
+  int32 spaceId = 5;
 }
 message GetSpaceInfoRequest {
-    int32 spaceId = 1;
+  int32 spaceId = 1;
 }
 message GetSpaceInfoResponse {
-    int32 spaceId = 1;
-    string spaceName = 2;
-    int32 creatorUserId = 3;
-    repeated GetTaskInfoResponse tasks = 4;
-    repeated GetStatusInfoResponse statuses = 5;
+  int32 spaceId = 1;
+  string spaceName = 2;
+  int32 creatorUserId = 3;
+  repeated GetTaskInfoResponse tasks = 4;
+  repeated GetStatusInfoResponse statuses = 5;
 }
 message RemoveTaskRequest {
   int32 taskId = 1;
@@ -76,15 +75,15 @@ message RemoveTaskResponse{
   bool result = 1;
 }
 message AddDefaultStatusRequest {
-    string statusName = 1;
+  string statusName = 1;
 }
 message AddDefaultStatusResponse {
-    bool result = 1;
+  bool result = 1;
 }
 message AddUserToSpaceRequest {
-    int32 spaceId = 1;
-    int32 userId = 2;
+  int32 spaceId = 1;
+  int32 userId = 2;
 }
 message AddUserToSpaceResponse {
-    bool result = 1;
+  bool result = 1;
 }

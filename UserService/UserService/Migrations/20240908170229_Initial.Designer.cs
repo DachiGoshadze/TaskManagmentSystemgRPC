@@ -11,8 +11,8 @@ using UserService.Data;
 namespace UserService.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240826162816_init")]
-    partial class init
+    [Migration("20240908170229_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

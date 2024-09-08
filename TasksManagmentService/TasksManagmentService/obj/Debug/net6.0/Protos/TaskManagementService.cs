@@ -25,56 +25,56 @@ namespace TasksManagmentService {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJQcm90b3MvdGFza01hbmFnZW1lbnRTZXJ2aWNlLnByb3RvEg50YXNrTWFu",
-            "YWdlbWVudCJBChVDcmVhdGVOZXdTcGFjZVJlcXVlc3QSFQoNY3JlYXRvclVz",
-            "ZXJJZBgBIAEoBRIRCglzcGFjZU5hbWUYAiABKAkiLAoWQ3JlYXRlTmV3U3Bh",
-            "Y2VSZXNwb25zZRISCgpuZXdTcGFjZUlkGAEgASgFIjcKEEFkZFN0YXR1c1Jl",
-            "cXVlc3QSDwoHc3BhY2VJZBgBIAEoBRISCgpzdGF0dXNOYW1lGAIgASgJIiUK",
-            "EUFkZFN0YXR1c1Jlc3BvbnNlEhAKCHN0YXR1c0lkGAEgASgFImIKEUFkZE5l",
-            "d1Rhc2tSZXF1ZXN0Eg8KB3NwYWNlSWQYASABKAUSEQoJdGFza1RpdGxlGAIg",
-            "ASgJEhcKD3Rhc2tEZXNjcmlwdGlvbhgDIAEoCRIQCghzdGF0dXNJZBgEIAEo",
-            "BSJjChJBZGROZXdUYXNrUmVzcG9uc2USDwoHc3BhY2VJZBgBIAEoBRIRCgl0",
-            "YXNrVGl0bGUYAiABKAkSFwoPdGFza0Rlc2NyaXB0aW9uGAMgASgJEhAKCHN0",
-            "YXR1c0lkGAQgASgFIigKFEdldFN0YXR1c0luZm9SZXF1ZXN0EhAKCHN0YXR1",
-            "c0lkGAEgASgFIj0KFUdldFN0YXR1c0luZm9SZXNwb25zZRIQCghzdGF0dXNJ",
-            "ZBgBIAEoBRISCgpzdGF0dXNOYW1lGAIgASgJIiQKEkdldFRhc2tJbmZvUmVx",
-            "dWVzdBIOCgZ0YXNrSWQYASABKAUicwoTR2V0VGFza0luZm9SZXNwb25zZRIO",
-            "CgZ0YXNrSWQYASABKAUSEAoIdGFza05hbWUYAiABKAkSFwoPdGFza0Rlc2Ny",
-            "aXB0aW9uGAMgASgJEhAKCHN0YXR1c0lkGAQgASgFEg8KB3NwYWNlSWQYBSAB",
-            "KAUiJgoTR2V0U3BhY2VJbmZvUmVxdWVzdBIPCgdzcGFjZUlkGAEgASgFIr4B",
-            "ChRHZXRTcGFjZUluZm9SZXNwb25zZRIPCgdzcGFjZUlkGAEgASgFEhEKCXNw",
-            "YWNlTmFtZRgCIAEoCRIVCg1jcmVhdG9yVXNlcklkGAMgASgFEjIKBXRhc2tz",
-            "GAQgAygLMiMudGFza01hbmFnZW1lbnQuR2V0VGFza0luZm9SZXNwb25zZRI3",
-            "CghzdGF0dXNlcxgFIAMoCzIlLnRhc2tNYW5hZ2VtZW50LkdldFN0YXR1c0lu",
-            "Zm9SZXNwb25zZSIjChFSZW1vdmVUYXNrUmVxdWVzdBIOCgZ0YXNrSWQYASAB",
-            "KAUiJAoSUmVtb3ZlVGFza1Jlc3BvbnNlEg4KBnJlc3VsdBgBIAEoCCItChdB",
-            "ZGREZWZhdWx0U3RhdHVzUmVxdWVzdBISCgpzdGF0dXNOYW1lGAEgASgJIioK",
-            "GEFkZERlZmF1bHRTdGF0dXNSZXNwb25zZRIOCgZyZXN1bHQYASABKAgiOAoV",
-            "QWRkVXNlclRvU3BhY2VSZXF1ZXN0Eg8KB3NwYWNlSWQYASABKAUSDgoGdXNl",
-            "cklkGAIgASgFIigKFkFkZFVzZXJUb1NwYWNlUmVzcG9uc2USDgoGcmVzdWx0",
-            "GAEgASgIMtAGChVUYXNrTWFuYWdlbWVudFNlcnZpY2USXwoOQ3JlYXRlTmV3",
-            "U3BhY2USJS50YXNrTWFuYWdlbWVudC5DcmVhdGVOZXdTcGFjZVJlcXVlc3Qa",
-            "Ji50YXNrTWFuYWdlbWVudC5DcmVhdGVOZXdTcGFjZVJlc3BvbnNlElMKDEFk",
-            "ZE5ld1N0YXR1cxIgLnRhc2tNYW5hZ2VtZW50LkFkZFN0YXR1c1JlcXVlc3Qa",
-            "IS50YXNrTWFuYWdlbWVudC5BZGRTdGF0dXNSZXNwb25zZRJTCgpBZGROZXdU",
-            "YXNrEiEudGFza01hbmFnZW1lbnQuQWRkTmV3VGFza1JlcXVlc3QaIi50YXNr",
-            "TWFuYWdlbWVudC5BZGROZXdUYXNrUmVzcG9uc2USWQoMR2V0U3BhY2VJbmZv",
-            "EiMudGFza01hbmFnZW1lbnQuR2V0U3BhY2VJbmZvUmVxdWVzdBokLnRhc2tN",
-            "YW5hZ2VtZW50LkdldFNwYWNlSW5mb1Jlc3BvbnNlElYKC0dldFRhc2tJbmZv",
-            "EiIudGFza01hbmFnZW1lbnQuR2V0VGFza0luZm9SZXF1ZXN0GiMudGFza01h",
-            "bmFnZW1lbnQuR2V0VGFza0luZm9SZXNwb25zZRJcCg1HZXRTdGF0dXNJbmZv",
-            "EiQudGFza01hbmFnZW1lbnQuR2V0U3RhdHVzSW5mb1JlcXVlc3QaJS50YXNr",
-            "TWFuYWdlbWVudC5HZXRTdGF0dXNJbmZvUmVzcG9uc2USUwoKUmVtb3ZlVGFz",
-            "axIhLnRhc2tNYW5hZ2VtZW50LlJlbW92ZVRhc2tSZXF1ZXN0GiIudGFza01h",
-            "bmFnZW1lbnQuUmVtb3ZlVGFza1Jlc3BvbnNlEmUKEEFkZERlZmF1bHRTdGF0",
-            "dXMSJy50YXNrTWFuYWdlbWVudC5BZGREZWZhdWx0U3RhdHVzUmVxdWVzdBoo",
-            "LnRhc2tNYW5hZ2VtZW50LkFkZERlZmF1bHRTdGF0dXNSZXNwb25zZRJfCg5B",
-            "ZGRVc2VyVG9TcGFjZRIlLnRhc2tNYW5hZ2VtZW50LkFkZFVzZXJUb1NwYWNl",
-            "UmVxdWVzdBomLnRhc2tNYW5hZ2VtZW50LkFkZFVzZXJUb1NwYWNlUmVzcG9u",
-            "c2VCGKoCFVRhc2tzTWFuYWdtZW50U2VydmljZWIGcHJvdG8z"));
+            "YWdlbWVudCIqChVDcmVhdGVOZXdTcGFjZVJlcXVlc3QSEQoJc3BhY2VOYW1l",
+            "GAEgASgJIiwKFkNyZWF0ZU5ld1NwYWNlUmVzcG9uc2USEgoKbmV3U3BhY2VJ",
+            "ZBgBIAEoBSI3ChBBZGRTdGF0dXNSZXF1ZXN0Eg8KB3NwYWNlSWQYASABKAUS",
+            "EgoKc3RhdHVzTmFtZRgCIAEoCSIlChFBZGRTdGF0dXNSZXNwb25zZRIQCghz",
+            "dGF0dXNJZBgBIAEoBSJiChFBZGROZXdUYXNrUmVxdWVzdBIPCgdzcGFjZUlk",
+            "GAEgASgFEhEKCXRhc2tUaXRsZRgCIAEoCRIXCg90YXNrRGVzY3JpcHRpb24Y",
+            "AyABKAkSEAoIc3RhdHVzSWQYBCABKAUiYwoSQWRkTmV3VGFza1Jlc3BvbnNl",
+            "Eg8KB3NwYWNlSWQYASABKAUSEQoJdGFza1RpdGxlGAIgASgJEhcKD3Rhc2tE",
+            "ZXNjcmlwdGlvbhgDIAEoCRIQCghzdGF0dXNJZBgEIAEoBSIoChRHZXRTdGF0",
+            "dXNJbmZvUmVxdWVzdBIQCghzdGF0dXNJZBgBIAEoBSI9ChVHZXRTdGF0dXNJ",
+            "bmZvUmVzcG9uc2USEAoIc3RhdHVzSWQYASABKAUSEgoKc3RhdHVzTmFtZRgC",
+            "IAEoCSIkChJHZXRUYXNrSW5mb1JlcXVlc3QSDgoGdGFza0lkGAEgASgFInMK",
+            "E0dldFRhc2tJbmZvUmVzcG9uc2USDgoGdGFza0lkGAEgASgFEhAKCHRhc2tO",
+            "YW1lGAIgASgJEhcKD3Rhc2tEZXNjcmlwdGlvbhgDIAEoCRIQCghzdGF0dXNJ",
+            "ZBgEIAEoBRIPCgdzcGFjZUlkGAUgASgFIiYKE0dldFNwYWNlSW5mb1JlcXVl",
+            "c3QSDwoHc3BhY2VJZBgBIAEoBSK+AQoUR2V0U3BhY2VJbmZvUmVzcG9uc2US",
+            "DwoHc3BhY2VJZBgBIAEoBRIRCglzcGFjZU5hbWUYAiABKAkSFQoNY3JlYXRv",
+            "clVzZXJJZBgDIAEoBRIyCgV0YXNrcxgEIAMoCzIjLnRhc2tNYW5hZ2VtZW50",
+            "LkdldFRhc2tJbmZvUmVzcG9uc2USNwoIc3RhdHVzZXMYBSADKAsyJS50YXNr",
+            "TWFuYWdlbWVudC5HZXRTdGF0dXNJbmZvUmVzcG9uc2UiIwoRUmVtb3ZlVGFz",
+            "a1JlcXVlc3QSDgoGdGFza0lkGAEgASgFIiQKElJlbW92ZVRhc2tSZXNwb25z",
+            "ZRIOCgZyZXN1bHQYASABKAgiLQoXQWRkRGVmYXVsdFN0YXR1c1JlcXVlc3QS",
+            "EgoKc3RhdHVzTmFtZRgBIAEoCSIqChhBZGREZWZhdWx0U3RhdHVzUmVzcG9u",
+            "c2USDgoGcmVzdWx0GAEgASgIIjgKFUFkZFVzZXJUb1NwYWNlUmVxdWVzdBIP",
+            "CgdzcGFjZUlkGAEgASgFEg4KBnVzZXJJZBgCIAEoBSIoChZBZGRVc2VyVG9T",
+            "cGFjZVJlc3BvbnNlEg4KBnJlc3VsdBgBIAEoCDLQBgoVVGFza01hbmFnZW1l",
+            "bnRTZXJ2aWNlEl8KDkNyZWF0ZU5ld1NwYWNlEiUudGFza01hbmFnZW1lbnQu",
+            "Q3JlYXRlTmV3U3BhY2VSZXF1ZXN0GiYudGFza01hbmFnZW1lbnQuQ3JlYXRl",
+            "TmV3U3BhY2VSZXNwb25zZRJTCgxBZGROZXdTdGF0dXMSIC50YXNrTWFuYWdl",
+            "bWVudC5BZGRTdGF0dXNSZXF1ZXN0GiEudGFza01hbmFnZW1lbnQuQWRkU3Rh",
+            "dHVzUmVzcG9uc2USUwoKQWRkTmV3VGFzaxIhLnRhc2tNYW5hZ2VtZW50LkFk",
+            "ZE5ld1Rhc2tSZXF1ZXN0GiIudGFza01hbmFnZW1lbnQuQWRkTmV3VGFza1Jl",
+            "c3BvbnNlElkKDEdldFNwYWNlSW5mbxIjLnRhc2tNYW5hZ2VtZW50LkdldFNw",
+            "YWNlSW5mb1JlcXVlc3QaJC50YXNrTWFuYWdlbWVudC5HZXRTcGFjZUluZm9S",
+            "ZXNwb25zZRJWCgtHZXRUYXNrSW5mbxIiLnRhc2tNYW5hZ2VtZW50LkdldFRh",
+            "c2tJbmZvUmVxdWVzdBojLnRhc2tNYW5hZ2VtZW50LkdldFRhc2tJbmZvUmVz",
+            "cG9uc2USXAoNR2V0U3RhdHVzSW5mbxIkLnRhc2tNYW5hZ2VtZW50LkdldFN0",
+            "YXR1c0luZm9SZXF1ZXN0GiUudGFza01hbmFnZW1lbnQuR2V0U3RhdHVzSW5m",
+            "b1Jlc3BvbnNlElMKClJlbW92ZVRhc2sSIS50YXNrTWFuYWdlbWVudC5SZW1v",
+            "dmVUYXNrUmVxdWVzdBoiLnRhc2tNYW5hZ2VtZW50LlJlbW92ZVRhc2tSZXNw",
+            "b25zZRJlChBBZGREZWZhdWx0U3RhdHVzEicudGFza01hbmFnZW1lbnQuQWRk",
+            "RGVmYXVsdFN0YXR1c1JlcXVlc3QaKC50YXNrTWFuYWdlbWVudC5BZGREZWZh",
+            "dWx0U3RhdHVzUmVzcG9uc2USXwoOQWRkVXNlclRvU3BhY2USJS50YXNrTWFu",
+            "YWdlbWVudC5BZGRVc2VyVG9TcGFjZVJlcXVlc3QaJi50YXNrTWFuYWdlbWVu",
+            "dC5BZGRVc2VyVG9TcGFjZVJlc3BvbnNlQhiqAhVUYXNrc01hbmFnbWVudFNl",
+            "cnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.CreateNewSpaceRequest), global::TasksManagmentService.CreateNewSpaceRequest.Parser, new[]{ "CreatorUserId", "SpaceName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.CreateNewSpaceRequest), global::TasksManagmentService.CreateNewSpaceRequest.Parser, new[]{ "SpaceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.CreateNewSpaceResponse), global::TasksManagmentService.CreateNewSpaceResponse.Parser, new[]{ "NewSpaceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.AddStatusRequest), global::TasksManagmentService.AddStatusRequest.Parser, new[]{ "SpaceId", "StatusName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.AddStatusResponse), global::TasksManagmentService.AddStatusResponse.Parser, new[]{ "StatusId" }, null, null, null, null),
@@ -133,7 +133,6 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateNewSpaceRequest(CreateNewSpaceRequest other) : this() {
-      creatorUserId_ = other.creatorUserId_;
       spaceName_ = other.spaceName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -144,20 +143,8 @@ namespace TasksManagmentService {
       return new CreateNewSpaceRequest(this);
     }
 
-    /// <summary>Field number for the "creatorUserId" field.</summary>
-    public const int CreatorUserIdFieldNumber = 1;
-    private int creatorUserId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CreatorUserId {
-      get { return creatorUserId_; }
-      set {
-        creatorUserId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "spaceName" field.</summary>
-    public const int SpaceNameFieldNumber = 2;
+    public const int SpaceNameFieldNumber = 1;
     private string spaceName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,7 +170,6 @@ namespace TasksManagmentService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CreatorUserId != other.CreatorUserId) return false;
       if (SpaceName != other.SpaceName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -192,7 +178,6 @@ namespace TasksManagmentService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CreatorUserId != 0) hash ^= CreatorUserId.GetHashCode();
       if (SpaceName.Length != 0) hash ^= SpaceName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -212,12 +197,8 @@ namespace TasksManagmentService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CreatorUserId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CreatorUserId);
-      }
       if (SpaceName.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(SpaceName);
       }
       if (_unknownFields != null) {
@@ -230,12 +211,8 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CreatorUserId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(CreatorUserId);
-      }
       if (SpaceName.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(SpaceName);
       }
       if (_unknownFields != null) {
@@ -248,9 +225,6 @@ namespace TasksManagmentService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CreatorUserId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CreatorUserId);
-      }
       if (SpaceName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SpaceName);
       }
@@ -265,9 +239,6 @@ namespace TasksManagmentService {
     public void MergeFrom(CreateNewSpaceRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.CreatorUserId != 0) {
-        CreatorUserId = other.CreatorUserId;
       }
       if (other.SpaceName.Length != 0) {
         SpaceName = other.SpaceName;
@@ -291,11 +262,7 @@ namespace TasksManagmentService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CreatorUserId = input.ReadInt32();
-            break;
-          }
-          case 18: {
+          case 10: {
             SpaceName = input.ReadString();
             break;
           }
@@ -318,11 +285,7 @@ namespace TasksManagmentService {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            CreatorUserId = input.ReadInt32();
-            break;
-          }
-          case 18: {
+          case 10: {
             SpaceName = input.ReadString();
             break;
           }

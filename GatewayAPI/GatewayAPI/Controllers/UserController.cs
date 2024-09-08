@@ -1,6 +1,7 @@
 ﻿using GatewayAPI.HelperServices;
 using Grpc.Core;
 using Grpc.Net.Client;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UserService;
@@ -16,7 +17,7 @@ namespace GatewayAPI.Controllers
         {
             _client = grpcConnectorService.GetUserServiceConnection();
         }
-        [HttpPost("SingIn")]
+        [HttpPost("SignIn")]
         public async Task<IActionResult> SignInUser([FromBody] UserSignInRequest request)
         {
             try
@@ -34,7 +35,7 @@ namespace GatewayAPI.Controllers
                 };
             }
         }
-        [HttpPut("SingUp")]
+        [HttpPut("SignUp")]
         public async Task<IActionResult> SignUpUser([FromBody] AddNewUserRequest request)
         {
             try
@@ -55,11 +56,15 @@ namespace GatewayAPI.Controllers
         }
         [Authorize]
         [HttpGet("GetUserInfo")]
-        public async Task<IActionResult> GetUserInfo(GetUserInfoRequest request)
+        public async Task<IActionResult> GetUserInfo([FromQuery] GetUserInfoRequest request)
         {
             try
             {
-                var response = await _client.GetUserInfoAsync(request, new Grpc.Core.Metadata());
+                var metadata = new Metadata
+                {
+                    { "Authorization", HttpContext.Request.Headers["Authorization"].ToString() }
+                };
+                var response = await _client.GetUserInfoAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)
@@ -75,11 +80,15 @@ namespace GatewayAPI.Controllers
         }
         [Authorize]
         [HttpGet("CheckUserExists")]
-        public async Task<IActionResult> CheckUser(UserExistsRequest request)
+        public async Task<IActionResult> CheckUser([FromQuery] UserExistsRequest request)
         {
             try
             {
-                var response = await _client.CheckUserExistsAsync(request, new Grpc.Core.Metadata());
+                var metadata = new Metadata
+                {
+                    { "Authorization", HttpContext.Request.Headers["Authorization"].ToString() }
+                };
+                var response = await _client.CheckUserExistsAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)

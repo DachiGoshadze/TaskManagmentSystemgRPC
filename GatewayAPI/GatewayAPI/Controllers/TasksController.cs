@@ -22,7 +22,11 @@ namespace GatewayAPI.Controllers
         {
             try
             {
-                var response = await _client.AddNewTaskAsync(request, new Metadata { });
+                var metadata = new Metadata
+                {
+                    { "Authorization", HttpContext.Request.Headers["Authorization"].ToString() }
+                };
+                var response = await _client.AddNewTaskAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)
@@ -41,7 +45,11 @@ namespace GatewayAPI.Controllers
         {
             try
             {
-                var response = await _client.GetTaskInfoAsync(request, new Metadata { });
+                var metadata = new Metadata
+                {
+                    { "Authorization", HttpContext.Request.Headers["Authorization"].ToString() }
+                };
+                var response = await _client.GetTaskInfoAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)
@@ -60,7 +68,11 @@ namespace GatewayAPI.Controllers
         {
             try
             {
-                var response = await _client.RemoveTaskAsync(request, new Metadata { });
+                var metadata = new Metadata
+                {
+                    { "Authorization", HttpContext.Request.Headers["Authorization"].ToString() }
+                };
+                var response = await _client.RemoveTaskAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)

@@ -1,13 +1,14 @@
 ﻿using Grpc.Core;
+using TasksManagmentService.HelperServices;
 using TasksManagmentService.Services;
 
 namespace TasksManagmentService.Controllers
 {
     public class ControllerService : TaskManagementService.TaskManagementServiceBase
     {
-        public readonly SpaceService _spaceService;
-        public readonly TaskService _taskService;
-        public readonly StatusService _statusService;
+        private readonly SpaceService _spaceService;
+        private readonly TaskService _taskService;
+        private readonly StatusService _statusService;
         public ControllerService(SpaceService spaceService, TaskService taskService, StatusService statusService)
         {
             _spaceService = spaceService;
@@ -31,12 +32,16 @@ namespace TasksManagmentService.Controllers
 
         public override async Task<CreateNewSpaceResponse> CreateNewSpace(CreateNewSpaceRequest request, ServerCallContext context)
         {
-            return await _spaceService.CreateNewSpace(request, context);
+            var token = context.RequestHeaders
+                .FirstOrDefault(header => header.Key == "authorization")?.Value.Split(" ").Last();
+            return await _spaceService.CreateNewSpace(request, context, TokenParseService.ParseUserIdentity(token!));
         }
 
         public override async Task<GetSpaceInfoResponse> GetSpaceInfo(GetSpaceInfoRequest request, ServerCallContext context)
         {
-            return await _spaceService.GetSpaceInfo(request, context);
+            var token = context.RequestHeaders
+                .FirstOrDefault(header => header.Key == "Authorization")?.Value;
+            return await _spaceService.GetSpaceInfo(request, context,TokenParseService.ParseUserIdentity(token!));
         }
 
         public override async Task<GetStatusInfoResponse> GetStatusInfo(GetStatusInfoRequest request, ServerCallContext context)
@@ -55,7 +60,9 @@ namespace TasksManagmentService.Controllers
         }
         public override async Task<AddUserToSpaceResponse> AddUserToSpace(AddUserToSpaceRequest request, ServerCallContext context)
         {
-            return await _spaceService.AddUserToSpace(request, context);
+            var token = context.RequestHeaders
+                .FirstOrDefault(header => header.Key == "Authorization")?.Value;
+            return await _spaceService.AddUserToSpace(request, context, TokenParseService.ParseUserIdentity(token!));
         }
     }
 }

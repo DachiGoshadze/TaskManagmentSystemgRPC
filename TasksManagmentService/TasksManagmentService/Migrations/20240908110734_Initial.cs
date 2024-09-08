@@ -4,7 +4,7 @@
 
 namespace TasksManagmentService.Migrations
 {
-    public partial class init : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,6 +20,21 @@ namespace TasksManagmentService.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Spaces", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserSpaces",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SpaceId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserSpaces", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -90,6 +105,9 @@ namespace TasksManagmentService.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Tasks");
+
+            migrationBuilder.DropTable(
+                name: "UserSpaces");
 
             migrationBuilder.DropTable(
                 name: "Statuses");

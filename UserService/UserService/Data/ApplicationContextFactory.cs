@@ -1,10 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.Configuration;
-using System.IO;
-using UserService.Data;
 
-namespace ShopApp.DB
+namespace UserService.Data
 {
     public class ApplicationContextFactory : IDesignTimeDbContextFactory<ApplicationContext>
     {
@@ -17,7 +14,7 @@ namespace ShopApp.DB
                 .AddJsonFile("appsettings.json")
                 .Build();
             
-            optionsBuilder.UseSqlServer("Server=DESKTOP-UGPA4P6\\SQLEXPRESS;Database=TaskManagmentSystem;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 
             return new ApplicationContext(optionsBuilder.Options);
         }

@@ -22,6 +22,7 @@ namespace GatewayAPI.Controllers
         {
             try
             {
+                
                 var token = HttpContext.Request.Headers["Authorization"].ToString();
                 var metadata = new Metadata
                 {
