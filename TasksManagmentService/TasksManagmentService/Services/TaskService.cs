@@ -33,13 +33,13 @@ public class TaskService
             Name = request.TaskTitle,
             Description = request.TaskDescription,
             StatusId = request.StatusId,
-            SpaceId = request.SpaceId
+            Space = _db.Spaces.FirstOrDefault(s => s.Id == request.SpaceId) ?? throw  new Exception("Space Not Found"),
         };
         await _db.Tasks.AddAsync(newTask);
         await _db.SaveChangesAsync();
         return new AddNewTaskResponse()
         {
-            SpaceId = newTask.SpaceId,
+            SpaceId = newTask.Space.Id,
             StatusId = newTask.StatusId,
             TaskDescription = newTask.Description,
             TaskTitle = newTask.Name
@@ -53,7 +53,7 @@ public class TaskService
             throw new RpcException(new Grpc.Core.Status(StatusCode.InvalidArgument, "InvalidArguments"));
         }
 
-        var task = await _db.Tasks.FirstOrDefaultAsync(t => t.Id == request.TaskId);
+        var task = await _db.Tasks.Include(u => u.Space).FirstOrDefaultAsync(t => t.Id == request.TaskId);
         if(task == null) throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound, $"Task With Id {request.TaskId} Not Found"));
         return new GetTaskInfoResponse()
         {
@@ -61,7 +61,7 @@ public class TaskService
             TaskDescription = task.Description,
             StatusId = task.StatusId,
             TaskId = task.Id,
-            SpaceId = task.SpaceId
+            SpaceId = task.Space.Id
         };
     }
 

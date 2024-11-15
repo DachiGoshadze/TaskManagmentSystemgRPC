@@ -10,10 +10,11 @@ service TaskManagementService {
   rpc AddNewTask (AddNewTaskRequest) returns (AddNewTaskResponse);
   rpc GetSpaceInfo (GetSpaceInfoRequest) returns (GetSpaceInfoResponse);
   rpc GetTaskInfo (GetTaskInfoRequest) returns (GetTaskInfoResponse);
-  rpc GetStatusInfo (GetStatusInfoRequest) returns (GetStatusInfoResponse);
+  rpc GetSpaceStatusesInfo (GetAllSpaceStatusInfoRequest) returns (GetAllSpaceStatusInfoResponse);
   rpc RemoveTask (RemoveTaskRequest) returns (RemoveTaskResponse);
   rpc AddDefaultStatus (AddDefaultStatusRequest) returns (AddDefaultStatusResponse);
   rpc AddUserToSpace (AddUserToSpaceRequest) returns (AddUserToSpaceResponse);
+  rpc GetAllMySpaces (GetAllMySpacesRequest) returns (GetAllMySpacesRequestResponse);
 }
 
 message CreateNewSpaceRequest {
@@ -41,12 +42,15 @@ message AddNewTaskResponse {
   string taskDescription = 3;
   int32 statusId = 4;
 }
-message GetStatusInfoRequest {
-    int32 statusId = 1;
+message GetAllSpaceStatusInfoRequest {
+    int32 spaceId = 1;
 }
 message GetStatusInfoResponse {
     int32 statusId = 1;
     string statusName = 2;
+}
+message GetAllSpaceStatusInfoResponse {
+    repeated  GetStatusInfoResponse spaceStatuses = 1;
 }
 message GetTaskInfoRequest {
     int32 taskId = 1; 
@@ -67,6 +71,11 @@ message GetSpaceInfoResponse {
     int32 creatorUserId = 3;
     repeated GetTaskInfoResponse tasks = 4;
     repeated GetStatusInfoResponse statuses = 5;
+}
+message GetAllMySpacesRequest {
+}
+message GetAllMySpacesRequestResponse {
+    repeated GetSpaceInfoResponse spaces = 1;
 }
 message RemoveTaskRequest {
   int32 taskId = 1;

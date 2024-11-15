@@ -17,12 +17,12 @@ namespace GatewayAPI.Controllers
         {
             _client = grpcConnectorService.GetTaskManagmentServiceConnection();
         }
-        [HttpGet("GetStatusInfo")]
-        public async Task<IActionResult> GetStatusInfo(GetStatusInfoRequest request)
+        [HttpGet("GetSpaceStatusesInfo")]
+        public async Task<IActionResult> GetSpaceStatusesInfo([FromQuery] GetAllSpaceStatusInfoRequest request)
         {
             try
             {
-                var response = await _client.GetStatusInfoAsync(request, new Metadata { });
+                var response = await _client.GetSpaceStatusesInfoAsync(request, new Metadata { });
                 return Ok(response);
             }
             catch (RpcException ex)

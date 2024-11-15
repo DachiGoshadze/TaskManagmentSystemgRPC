@@ -39,7 +39,8 @@ public class SpaceService
             };
             await _db.Spaces.AddAsync(space);
             await _db.SaveChangesAsync();
-            await AddUserToSpace(new AddUserToSpaceRequest() { SpaceId = space.Id, UserId = int.Parse(user.user_id)}, context, user);
+            await AddUserToSpace(new AddUserToSpaceRequest() { SpaceId = space.Id, UserId = int.Parse(user.user_id) },
+                context, user);
             return new CreateNewSpaceResponse()
             {
                 NewSpaceId = space.Id
@@ -55,7 +56,7 @@ public class SpaceService
     {
         if (request.SpaceId == 0)
             throw new RpcException(new Grpc.Core.Status(StatusCode.InvalidArgument, "InvalidArguments"));
-        var space = await _db.Spaces.FirstOrDefaultAsync(s => s.Id == request.SpaceId);
+        var space = await _db.Spaces.Include(s => s.Tasks).Include(s => s.Statuses).FirstOrDefaultAsync(s => s.Id == request.SpaceId);
         if (space == null)
             throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound,
                 $"Space With Id {request.SpaceId} Not Found"));
@@ -66,23 +67,21 @@ public class SpaceService
                 TaskDescription = task.Description,
                 StatusId = task.StatusId,
                 TaskId = task.Id,
-                SpaceId = task.SpaceId
+                SpaceId = task.Space.Id
             }).ToList()
             : new List<GetTaskInfoResponse>();
-        var StatusesResponse = space.Statuses != null
-            ? space.Statuses.Select(status => new GetStatusInfoResponse()
-            {
-                StatusId = status.Id,
-                StatusName = status.Name
-            }).ToList()
-            : new List<GetStatusInfoResponse>();
+        var statusesResponse = space.Statuses.Select(status => new GetStatusInfoResponse()
+        {
+            StatusId = status.Id,
+            StatusName = status.Name
+        }).ToList();
         return new GetSpaceInfoResponse()
         {
             SpaceId = space.Id,
             SpaceName = space.Name,
             CreatorUserId = space.creatorId,
             Tasks = { tasksResponse },
-            Statuses = { StatusesResponse }
+            Statuses = { statusesResponse }
         };
     }
 
@@ -110,5 +109,20 @@ public class SpaceService
 
         throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound,
             $"Space With Id {request.SpaceId} or User with Id {request.UserId} Not Found"));
+    }
+
+    public async Task<GetAllMySpacesRequestResponse> GetAllMySpaces(GetAllMySpacesRequest request,
+        ServerCallContext context, UserIdentity user)
+    {
+        var spacesIndexes = _db.Spaces.Where(s =>
+            s.creatorId == int.Parse(user.user_id) || _db.UserSpaces.Where(u => u.UserId.Equals(user.user_id))
+                .Select(t => t.SpaceId).Contains(s.Id)).Select(s => s.Id).ToList();
+        var spaces = new GetAllMySpacesRequestResponse();
+        foreach(var ind in spacesIndexes)
+        {
+            spaces.Spaces.Add(await GetSpaceInfo(request: new GetSpaceInfoRequest() { SpaceId = ind }, context: context, user: user));
+        }
+
+        return spaces;
     }
 }

@@ -37,23 +37,22 @@ public class StatusService
         };
     }
 
-    public async Task<GetStatusInfoResponse> GetStatusInfo(GetStatusInfoRequest request,
+    public Task<GetAllSpaceStatusInfoResponse> GetSpaceStatusesInfo(GetAllSpaceStatusInfoRequest request,
         ServerCallContext context)
     {
-        if (request.StatusId == 0)
+        if (request.SpaceId == 0)
         {
             throw new RpcException(new Grpc.Core.Status(StatusCode.InvalidArgument, "InvalidArguments"));
         }
 
-        var status = await _db.Statuses.FirstOrDefaultAsync(s => s.Id == request.StatusId);
-        if (status == null)
-            throw new RpcException(new Grpc.Core.Status(StatusCode.NotFound,
-                $"Status With Id {request.StatusId} Not Found"));
-        return new GetStatusInfoResponse()
+        var statuses = _db.Statuses.Where(s => s.SpaceId == request.SpaceId).Select(s => new GetStatusInfoResponse()
         {
-            StatusId = status.Id,
-            StatusName = status.Name
-        };
+            StatusId = s.Id,
+            StatusName = s.Name
+        });
+        var response = new GetAllSpaceStatusInfoResponse();
+        response.SpaceStatuses.AddRange(statuses);
+        return Task.FromResult(response);
     }
 
     public  async Task<AddDefaultStatusResponse> AddDefaultStatus(AddDefaultStatusRequest request,

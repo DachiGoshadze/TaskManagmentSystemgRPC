@@ -10,5 +10,5 @@ public class TaskAssignment
     public string Description { get; set; }
     public int StatusId { get; set; }
     public Status Status { get; set; }
-    public int SpaceId { get; set; }
+    public Space Space { get; set; }
 }

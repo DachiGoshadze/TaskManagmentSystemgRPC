@@ -8,6 +8,6 @@ public class Space
     public int Id { get; set; }
     public string Name { get; set; }
     public int creatorId { get; set; }
-    public ICollection<Status> Statuses { get; set; }
-    public ICollection<TaskAssignment> Tasks { get; set; }
+    public List<Status> Statuses { get; set; } = new();
+    public List<TaskAssignment> Tasks { get; set; } = new();
 }

@@ -40,13 +40,13 @@ namespace TasksManagmentService.Controllers
         public override async Task<GetSpaceInfoResponse> GetSpaceInfo(GetSpaceInfoRequest request, ServerCallContext context)
         {
             var token = context.RequestHeaders
-                .FirstOrDefault(header => header.Key == "Authorization")?.Value;
+                .FirstOrDefault(header => header.Key == "authorization")?.Value.Split(' ').Last();
             return await _spaceService.GetSpaceInfo(request, context,TokenParseService.ParseUserIdentity(token!));
         }
 
-        public override async Task<GetStatusInfoResponse> GetStatusInfo(GetStatusInfoRequest request, ServerCallContext context)
+        public override async Task<GetAllSpaceStatusInfoResponse> GetSpaceStatusesInfo(GetAllSpaceStatusInfoRequest request, ServerCallContext context)
         {
-            return await _statusService.GetStatusInfo(request, context);
+            return await _statusService.GetSpaceStatusesInfo(request, context);
         }
 
         public override async Task<GetTaskInfoResponse> GetTaskInfo(GetTaskInfoRequest request, ServerCallContext context)
@@ -61,8 +61,15 @@ namespace TasksManagmentService.Controllers
         public override async Task<AddUserToSpaceResponse> AddUserToSpace(AddUserToSpaceRequest request, ServerCallContext context)
         {
             var token = context.RequestHeaders
-                .FirstOrDefault(header => header.Key == "Authorization")?.Value;
+                .FirstOrDefault(header => header.Key == "authorization")?.Value.Split(' ').Last();
             return await _spaceService.AddUserToSpace(request, context, TokenParseService.ParseUserIdentity(token!));
+        }
+
+        public override async Task<GetAllMySpacesRequestResponse> GetAllMySpaces(GetAllMySpacesRequest request, ServerCallContext context)
+        {
+            var token = context.RequestHeaders
+                .FirstOrDefault(header => header.Key == "authorization")?.Value.Split(' ').Last();
+            return await _spaceService.GetAllMySpaces(request, context, TokenParseService.ParseUserIdentity(token!));
         }
     }
 }

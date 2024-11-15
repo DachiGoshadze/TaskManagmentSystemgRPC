@@ -66,7 +66,7 @@ namespace GatewayAPI.Controllers
                 };
             }
         }
-        [HttpGet("AddUserToSpace")]
+        [HttpPost("AddUserToSpace")]
         public async Task<IActionResult> AddUserToSpace(AddUserToSpaceRequest request)
         {
             try
@@ -77,6 +77,30 @@ namespace GatewayAPI.Controllers
                     { "Authorization", token }
                 };
                 var response = await _client.AddUserToSpaceAsync(request, metadata);
+                return Ok(response);
+            }
+            catch (RpcException ex)
+            {
+                return ex.StatusCode switch
+                {
+                    Grpc.Core.StatusCode.NotFound => NotFound(ex.Status.Detail),
+                    Grpc.Core.StatusCode.Unauthenticated => Unauthorized(ex.Status.Detail),
+                    Grpc.Core.StatusCode.InvalidArgument => BadRequest(ex.Status.Detail),
+                    _ => StatusCode((int)ex.StatusCode, ex.Status.Detail)
+                };
+            }
+        }
+        [HttpGet("GetAllMySpaces")]
+        public async Task<IActionResult> GetAllMySpaces([FromQuery] GetAllMySpacesRequest request)
+        {
+            try
+            {
+                var token = HttpContext.Request.Headers["Authorization"].ToString();
+                var metadata = new Metadata
+                {
+                    { "Authorization", token }
+                };
+                var response = await _client.GetAllMySpacesAsync(request, metadata);
                 return Ok(response);
             }
             catch (RpcException ex)

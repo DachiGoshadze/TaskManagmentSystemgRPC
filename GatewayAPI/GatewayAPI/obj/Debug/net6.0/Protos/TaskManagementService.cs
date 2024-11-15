@@ -33,44 +33,51 @@ namespace TasksManagmentService {
             "GAEgASgFEhEKCXRhc2tUaXRsZRgCIAEoCRIXCg90YXNrRGVzY3JpcHRpb24Y",
             "AyABKAkSEAoIc3RhdHVzSWQYBCABKAUiYwoSQWRkTmV3VGFza1Jlc3BvbnNl",
             "Eg8KB3NwYWNlSWQYASABKAUSEQoJdGFza1RpdGxlGAIgASgJEhcKD3Rhc2tE",
-            "ZXNjcmlwdGlvbhgDIAEoCRIQCghzdGF0dXNJZBgEIAEoBSIoChRHZXRTdGF0",
-            "dXNJbmZvUmVxdWVzdBIQCghzdGF0dXNJZBgBIAEoBSI9ChVHZXRTdGF0dXNJ",
-            "bmZvUmVzcG9uc2USEAoIc3RhdHVzSWQYASABKAUSEgoKc3RhdHVzTmFtZRgC",
-            "IAEoCSIkChJHZXRUYXNrSW5mb1JlcXVlc3QSDgoGdGFza0lkGAEgASgFInMK",
-            "E0dldFRhc2tJbmZvUmVzcG9uc2USDgoGdGFza0lkGAEgASgFEhAKCHRhc2tO",
-            "YW1lGAIgASgJEhcKD3Rhc2tEZXNjcmlwdGlvbhgDIAEoCRIQCghzdGF0dXNJ",
-            "ZBgEIAEoBRIPCgdzcGFjZUlkGAUgASgFIiYKE0dldFNwYWNlSW5mb1JlcXVl",
-            "c3QSDwoHc3BhY2VJZBgBIAEoBSK+AQoUR2V0U3BhY2VJbmZvUmVzcG9uc2US",
-            "DwoHc3BhY2VJZBgBIAEoBRIRCglzcGFjZU5hbWUYAiABKAkSFQoNY3JlYXRv",
-            "clVzZXJJZBgDIAEoBRIyCgV0YXNrcxgEIAMoCzIjLnRhc2tNYW5hZ2VtZW50",
-            "LkdldFRhc2tJbmZvUmVzcG9uc2USNwoIc3RhdHVzZXMYBSADKAsyJS50YXNr",
-            "TWFuYWdlbWVudC5HZXRTdGF0dXNJbmZvUmVzcG9uc2UiIwoRUmVtb3ZlVGFz",
-            "a1JlcXVlc3QSDgoGdGFza0lkGAEgASgFIiQKElJlbW92ZVRhc2tSZXNwb25z",
-            "ZRIOCgZyZXN1bHQYASABKAgiLQoXQWRkRGVmYXVsdFN0YXR1c1JlcXVlc3QS",
-            "EgoKc3RhdHVzTmFtZRgBIAEoCSIqChhBZGREZWZhdWx0U3RhdHVzUmVzcG9u",
-            "c2USDgoGcmVzdWx0GAEgASgIIjgKFUFkZFVzZXJUb1NwYWNlUmVxdWVzdBIP",
-            "CgdzcGFjZUlkGAEgASgFEg4KBnVzZXJJZBgCIAEoBSIoChZBZGRVc2VyVG9T",
-            "cGFjZVJlc3BvbnNlEg4KBnJlc3VsdBgBIAEoCDLQBgoVVGFza01hbmFnZW1l",
-            "bnRTZXJ2aWNlEl8KDkNyZWF0ZU5ld1NwYWNlEiUudGFza01hbmFnZW1lbnQu",
-            "Q3JlYXRlTmV3U3BhY2VSZXF1ZXN0GiYudGFza01hbmFnZW1lbnQuQ3JlYXRl",
-            "TmV3U3BhY2VSZXNwb25zZRJTCgxBZGROZXdTdGF0dXMSIC50YXNrTWFuYWdl",
-            "bWVudC5BZGRTdGF0dXNSZXF1ZXN0GiEudGFza01hbmFnZW1lbnQuQWRkU3Rh",
-            "dHVzUmVzcG9uc2USUwoKQWRkTmV3VGFzaxIhLnRhc2tNYW5hZ2VtZW50LkFk",
-            "ZE5ld1Rhc2tSZXF1ZXN0GiIudGFza01hbmFnZW1lbnQuQWRkTmV3VGFza1Jl",
-            "c3BvbnNlElkKDEdldFNwYWNlSW5mbxIjLnRhc2tNYW5hZ2VtZW50LkdldFNw",
-            "YWNlSW5mb1JlcXVlc3QaJC50YXNrTWFuYWdlbWVudC5HZXRTcGFjZUluZm9S",
-            "ZXNwb25zZRJWCgtHZXRUYXNrSW5mbxIiLnRhc2tNYW5hZ2VtZW50LkdldFRh",
-            "c2tJbmZvUmVxdWVzdBojLnRhc2tNYW5hZ2VtZW50LkdldFRhc2tJbmZvUmVz",
-            "cG9uc2USXAoNR2V0U3RhdHVzSW5mbxIkLnRhc2tNYW5hZ2VtZW50LkdldFN0",
-            "YXR1c0luZm9SZXF1ZXN0GiUudGFza01hbmFnZW1lbnQuR2V0U3RhdHVzSW5m",
-            "b1Jlc3BvbnNlElMKClJlbW92ZVRhc2sSIS50YXNrTWFuYWdlbWVudC5SZW1v",
-            "dmVUYXNrUmVxdWVzdBoiLnRhc2tNYW5hZ2VtZW50LlJlbW92ZVRhc2tSZXNw",
-            "b25zZRJlChBBZGREZWZhdWx0U3RhdHVzEicudGFza01hbmFnZW1lbnQuQWRk",
-            "RGVmYXVsdFN0YXR1c1JlcXVlc3QaKC50YXNrTWFuYWdlbWVudC5BZGREZWZh",
-            "dWx0U3RhdHVzUmVzcG9uc2USXwoOQWRkVXNlclRvU3BhY2USJS50YXNrTWFu",
-            "YWdlbWVudC5BZGRVc2VyVG9TcGFjZVJlcXVlc3QaJi50YXNrTWFuYWdlbWVu",
-            "dC5BZGRVc2VyVG9TcGFjZVJlc3BvbnNlQhiqAhVUYXNrc01hbmFnbWVudFNl",
-            "cnZpY2ViBnByb3RvMw=="));
+            "ZXNjcmlwdGlvbhgDIAEoCRIQCghzdGF0dXNJZBgEIAEoBSIvChxHZXRBbGxT",
+            "cGFjZVN0YXR1c0luZm9SZXF1ZXN0Eg8KB3NwYWNlSWQYASABKAUiPQoVR2V0",
+            "U3RhdHVzSW5mb1Jlc3BvbnNlEhAKCHN0YXR1c0lkGAEgASgFEhIKCnN0YXR1",
+            "c05hbWUYAiABKAkiXQodR2V0QWxsU3BhY2VTdGF0dXNJbmZvUmVzcG9uc2US",
+            "PAoNc3BhY2VTdGF0dXNlcxgBIAMoCzIlLnRhc2tNYW5hZ2VtZW50LkdldFN0",
+            "YXR1c0luZm9SZXNwb25zZSIkChJHZXRUYXNrSW5mb1JlcXVlc3QSDgoGdGFz",
+            "a0lkGAEgASgFInMKE0dldFRhc2tJbmZvUmVzcG9uc2USDgoGdGFza0lkGAEg",
+            "ASgFEhAKCHRhc2tOYW1lGAIgASgJEhcKD3Rhc2tEZXNjcmlwdGlvbhgDIAEo",
+            "CRIQCghzdGF0dXNJZBgEIAEoBRIPCgdzcGFjZUlkGAUgASgFIiYKE0dldFNw",
+            "YWNlSW5mb1JlcXVlc3QSDwoHc3BhY2VJZBgBIAEoBSK+AQoUR2V0U3BhY2VJ",
+            "bmZvUmVzcG9uc2USDwoHc3BhY2VJZBgBIAEoBRIRCglzcGFjZU5hbWUYAiAB",
+            "KAkSFQoNY3JlYXRvclVzZXJJZBgDIAEoBRIyCgV0YXNrcxgEIAMoCzIjLnRh",
+            "c2tNYW5hZ2VtZW50LkdldFRhc2tJbmZvUmVzcG9uc2USNwoIc3RhdHVzZXMY",
+            "BSADKAsyJS50YXNrTWFuYWdlbWVudC5HZXRTdGF0dXNJbmZvUmVzcG9uc2Ui",
+            "FwoVR2V0QWxsTXlTcGFjZXNSZXF1ZXN0IlUKHUdldEFsbE15U3BhY2VzUmVx",
+            "dWVzdFJlc3BvbnNlEjQKBnNwYWNlcxgBIAMoCzIkLnRhc2tNYW5hZ2VtZW50",
+            "LkdldFNwYWNlSW5mb1Jlc3BvbnNlIiMKEVJlbW92ZVRhc2tSZXF1ZXN0Eg4K",
+            "BnRhc2tJZBgBIAEoBSIkChJSZW1vdmVUYXNrUmVzcG9uc2USDgoGcmVzdWx0",
+            "GAEgASgIIi0KF0FkZERlZmF1bHRTdGF0dXNSZXF1ZXN0EhIKCnN0YXR1c05h",
+            "bWUYASABKAkiKgoYQWRkRGVmYXVsdFN0YXR1c1Jlc3BvbnNlEg4KBnJlc3Vs",
+            "dBgBIAEoCCI4ChVBZGRVc2VyVG9TcGFjZVJlcXVlc3QSDwoHc3BhY2VJZBgB",
+            "IAEoBRIOCgZ1c2VySWQYAiABKAUiKAoWQWRkVXNlclRvU3BhY2VSZXNwb25z",
+            "ZRIOCgZyZXN1bHQYASABKAgyzwcKFVRhc2tNYW5hZ2VtZW50U2VydmljZRJf",
+            "Cg5DcmVhdGVOZXdTcGFjZRIlLnRhc2tNYW5hZ2VtZW50LkNyZWF0ZU5ld1Nw",
+            "YWNlUmVxdWVzdBomLnRhc2tNYW5hZ2VtZW50LkNyZWF0ZU5ld1NwYWNlUmVz",
+            "cG9uc2USUwoMQWRkTmV3U3RhdHVzEiAudGFza01hbmFnZW1lbnQuQWRkU3Rh",
+            "dHVzUmVxdWVzdBohLnRhc2tNYW5hZ2VtZW50LkFkZFN0YXR1c1Jlc3BvbnNl",
+            "ElMKCkFkZE5ld1Rhc2sSIS50YXNrTWFuYWdlbWVudC5BZGROZXdUYXNrUmVx",
+            "dWVzdBoiLnRhc2tNYW5hZ2VtZW50LkFkZE5ld1Rhc2tSZXNwb25zZRJZCgxH",
+            "ZXRTcGFjZUluZm8SIy50YXNrTWFuYWdlbWVudC5HZXRTcGFjZUluZm9SZXF1",
+            "ZXN0GiQudGFza01hbmFnZW1lbnQuR2V0U3BhY2VJbmZvUmVzcG9uc2USVgoL",
+            "R2V0VGFza0luZm8SIi50YXNrTWFuYWdlbWVudC5HZXRUYXNrSW5mb1JlcXVl",
+            "c3QaIy50YXNrTWFuYWdlbWVudC5HZXRUYXNrSW5mb1Jlc3BvbnNlEnMKFEdl",
+            "dFNwYWNlU3RhdHVzZXNJbmZvEiwudGFza01hbmFnZW1lbnQuR2V0QWxsU3Bh",
+            "Y2VTdGF0dXNJbmZvUmVxdWVzdBotLnRhc2tNYW5hZ2VtZW50LkdldEFsbFNw",
+            "YWNlU3RhdHVzSW5mb1Jlc3BvbnNlElMKClJlbW92ZVRhc2sSIS50YXNrTWFu",
+            "YWdlbWVudC5SZW1vdmVUYXNrUmVxdWVzdBoiLnRhc2tNYW5hZ2VtZW50LlJl",
+            "bW92ZVRhc2tSZXNwb25zZRJlChBBZGREZWZhdWx0U3RhdHVzEicudGFza01h",
+            "bmFnZW1lbnQuQWRkRGVmYXVsdFN0YXR1c1JlcXVlc3QaKC50YXNrTWFuYWdl",
+            "bWVudC5BZGREZWZhdWx0U3RhdHVzUmVzcG9uc2USXwoOQWRkVXNlclRvU3Bh",
+            "Y2USJS50YXNrTWFuYWdlbWVudC5BZGRVc2VyVG9TcGFjZVJlcXVlc3QaJi50",
+            "YXNrTWFuYWdlbWVudC5BZGRVc2VyVG9TcGFjZVJlc3BvbnNlEmYKDkdldEFs",
+            "bE15U3BhY2VzEiUudGFza01hbmFnZW1lbnQuR2V0QWxsTXlTcGFjZXNSZXF1",
+            "ZXN0Gi0udGFza01hbmFnZW1lbnQuR2V0QWxsTXlTcGFjZXNSZXF1ZXN0UmVz",
+            "cG9uc2VCGKoCFVRhc2tzTWFuYWdtZW50U2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -80,12 +87,15 @@ namespace TasksManagmentService {
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.AddStatusResponse), global::TasksManagmentService.AddStatusResponse.Parser, new[]{ "StatusId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.AddNewTaskRequest), global::TasksManagmentService.AddNewTaskRequest.Parser, new[]{ "SpaceId", "TaskTitle", "TaskDescription", "StatusId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.AddNewTaskResponse), global::TasksManagmentService.AddNewTaskResponse.Parser, new[]{ "SpaceId", "TaskTitle", "TaskDescription", "StatusId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetStatusInfoRequest), global::TasksManagmentService.GetStatusInfoRequest.Parser, new[]{ "StatusId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetAllSpaceStatusInfoRequest), global::TasksManagmentService.GetAllSpaceStatusInfoRequest.Parser, new[]{ "SpaceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetStatusInfoResponse), global::TasksManagmentService.GetStatusInfoResponse.Parser, new[]{ "StatusId", "StatusName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetAllSpaceStatusInfoResponse), global::TasksManagmentService.GetAllSpaceStatusInfoResponse.Parser, new[]{ "SpaceStatuses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetTaskInfoRequest), global::TasksManagmentService.GetTaskInfoRequest.Parser, new[]{ "TaskId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetTaskInfoResponse), global::TasksManagmentService.GetTaskInfoResponse.Parser, new[]{ "TaskId", "TaskName", "TaskDescription", "StatusId", "SpaceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetSpaceInfoRequest), global::TasksManagmentService.GetSpaceInfoRequest.Parser, new[]{ "SpaceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetSpaceInfoResponse), global::TasksManagmentService.GetSpaceInfoResponse.Parser, new[]{ "SpaceId", "SpaceName", "CreatorUserId", "Tasks", "Statuses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetAllMySpacesRequest), global::TasksManagmentService.GetAllMySpacesRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.GetAllMySpacesRequestResponse), global::TasksManagmentService.GetAllMySpacesRequestResponse.Parser, new[]{ "Spaces" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.RemoveTaskRequest), global::TasksManagmentService.RemoveTaskRequest.Parser, new[]{ "TaskId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.RemoveTaskResponse), global::TasksManagmentService.RemoveTaskResponse.Parser, new[]{ "Result" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TasksManagmentService.AddDefaultStatusRequest), global::TasksManagmentService.AddDefaultStatusRequest.Parser, new[]{ "StatusName" }, null, null, null, null),
@@ -1546,16 +1556,16 @@ namespace TasksManagmentService {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetStatusInfoRequest : pb::IMessage<GetStatusInfoRequest>
+  public sealed partial class GetAllSpaceStatusInfoRequest : pb::IMessage<GetAllSpaceStatusInfoRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GetStatusInfoRequest> _parser = new pb::MessageParser<GetStatusInfoRequest>(() => new GetStatusInfoRequest());
+    private static readonly pb::MessageParser<GetAllSpaceStatusInfoRequest> _parser = new pb::MessageParser<GetAllSpaceStatusInfoRequest>(() => new GetAllSpaceStatusInfoRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetStatusInfoRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetAllSpaceStatusInfoRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1571,7 +1581,7 @@ namespace TasksManagmentService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetStatusInfoRequest() {
+    public GetAllSpaceStatusInfoRequest() {
       OnConstruction();
     }
 
@@ -1579,45 +1589,45 @@ namespace TasksManagmentService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetStatusInfoRequest(GetStatusInfoRequest other) : this() {
-      statusId_ = other.statusId_;
+    public GetAllSpaceStatusInfoRequest(GetAllSpaceStatusInfoRequest other) : this() {
+      spaceId_ = other.spaceId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetStatusInfoRequest Clone() {
-      return new GetStatusInfoRequest(this);
+    public GetAllSpaceStatusInfoRequest Clone() {
+      return new GetAllSpaceStatusInfoRequest(this);
     }
 
-    /// <summary>Field number for the "statusId" field.</summary>
-    public const int StatusIdFieldNumber = 1;
-    private int statusId_;
+    /// <summary>Field number for the "spaceId" field.</summary>
+    public const int SpaceIdFieldNumber = 1;
+    private int spaceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int StatusId {
-      get { return statusId_; }
+    public int SpaceId {
+      get { return spaceId_; }
       set {
-        statusId_ = value;
+        spaceId_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GetStatusInfoRequest);
+      return Equals(other as GetAllSpaceStatusInfoRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetStatusInfoRequest other) {
+    public bool Equals(GetAllSpaceStatusInfoRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StatusId != other.StatusId) return false;
+      if (SpaceId != other.SpaceId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1625,7 +1635,7 @@ namespace TasksManagmentService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StatusId != 0) hash ^= StatusId.GetHashCode();
+      if (SpaceId != 0) hash ^= SpaceId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1644,9 +1654,9 @@ namespace TasksManagmentService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StatusId != 0) {
+      if (SpaceId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(StatusId);
+        output.WriteInt32(SpaceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1658,9 +1668,9 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StatusId != 0) {
+      if (SpaceId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(StatusId);
+        output.WriteInt32(SpaceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1672,8 +1682,8 @@ namespace TasksManagmentService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StatusId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusId);
+      if (SpaceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SpaceId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1683,12 +1693,12 @@ namespace TasksManagmentService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetStatusInfoRequest other) {
+    public void MergeFrom(GetAllSpaceStatusInfoRequest other) {
       if (other == null) {
         return;
       }
-      if (other.StatusId != 0) {
-        StatusId = other.StatusId;
+      if (other.SpaceId != 0) {
+        SpaceId = other.SpaceId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1710,7 +1720,7 @@ namespace TasksManagmentService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            StatusId = input.ReadInt32();
+            SpaceId = input.ReadInt32();
             break;
           }
         }
@@ -1733,7 +1743,7 @@ namespace TasksManagmentService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            StatusId = input.ReadInt32();
+            SpaceId = input.ReadInt32();
             break;
           }
         }
@@ -1979,6 +1989,193 @@ namespace TasksManagmentService {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAllSpaceStatusInfoResponse : pb::IMessage<GetAllSpaceStatusInfoResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAllSpaceStatusInfoResponse> _parser = new pb::MessageParser<GetAllSpaceStatusInfoResponse>(() => new GetAllSpaceStatusInfoResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAllSpaceStatusInfoResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllSpaceStatusInfoResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllSpaceStatusInfoResponse(GetAllSpaceStatusInfoResponse other) : this() {
+      spaceStatuses_ = other.spaceStatuses_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllSpaceStatusInfoResponse Clone() {
+      return new GetAllSpaceStatusInfoResponse(this);
+    }
+
+    /// <summary>Field number for the "spaceStatuses" field.</summary>
+    public const int SpaceStatusesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::TasksManagmentService.GetStatusInfoResponse> _repeated_spaceStatuses_codec
+        = pb::FieldCodec.ForMessage(10, global::TasksManagmentService.GetStatusInfoResponse.Parser);
+    private readonly pbc::RepeatedField<global::TasksManagmentService.GetStatusInfoResponse> spaceStatuses_ = new pbc::RepeatedField<global::TasksManagmentService.GetStatusInfoResponse>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::TasksManagmentService.GetStatusInfoResponse> SpaceStatuses {
+      get { return spaceStatuses_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAllSpaceStatusInfoResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAllSpaceStatusInfoResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!spaceStatuses_.Equals(other.spaceStatuses_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= spaceStatuses_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      spaceStatuses_.WriteTo(output, _repeated_spaceStatuses_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      spaceStatuses_.WriteTo(ref output, _repeated_spaceStatuses_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += spaceStatuses_.CalculateSize(_repeated_spaceStatuses_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAllSpaceStatusInfoResponse other) {
+      if (other == null) {
+        return;
+      }
+      spaceStatuses_.Add(other.spaceStatuses_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            spaceStatuses_.AddEntriesFrom(input, _repeated_spaceStatuses_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            spaceStatuses_.AddEntriesFrom(ref input, _repeated_spaceStatuses_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTaskInfoRequest : pb::IMessage<GetTaskInfoRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1993,7 +2190,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2191,7 +2388,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2537,7 +2734,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2735,7 +2932,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3045,6 +3242,354 @@ namespace TasksManagmentService {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAllMySpacesRequest : pb::IMessage<GetAllMySpacesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAllMySpacesRequest> _parser = new pb::MessageParser<GetAllMySpacesRequest>(() => new GetAllMySpacesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAllMySpacesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllMySpacesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllMySpacesRequest(GetAllMySpacesRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllMySpacesRequest Clone() {
+      return new GetAllMySpacesRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAllMySpacesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAllMySpacesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAllMySpacesRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAllMySpacesRequestResponse : pb::IMessage<GetAllMySpacesRequestResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAllMySpacesRequestResponse> _parser = new pb::MessageParser<GetAllMySpacesRequestResponse>(() => new GetAllMySpacesRequestResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAllMySpacesRequestResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllMySpacesRequestResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllMySpacesRequestResponse(GetAllMySpacesRequestResponse other) : this() {
+      spaces_ = other.spaces_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllMySpacesRequestResponse Clone() {
+      return new GetAllMySpacesRequestResponse(this);
+    }
+
+    /// <summary>Field number for the "spaces" field.</summary>
+    public const int SpacesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::TasksManagmentService.GetSpaceInfoResponse> _repeated_spaces_codec
+        = pb::FieldCodec.ForMessage(10, global::TasksManagmentService.GetSpaceInfoResponse.Parser);
+    private readonly pbc::RepeatedField<global::TasksManagmentService.GetSpaceInfoResponse> spaces_ = new pbc::RepeatedField<global::TasksManagmentService.GetSpaceInfoResponse>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::TasksManagmentService.GetSpaceInfoResponse> Spaces {
+      get { return spaces_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAllMySpacesRequestResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAllMySpacesRequestResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!spaces_.Equals(other.spaces_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= spaces_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      spaces_.WriteTo(output, _repeated_spaces_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      spaces_.WriteTo(ref output, _repeated_spaces_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += spaces_.CalculateSize(_repeated_spaces_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAllMySpacesRequestResponse other) {
+      if (other == null) {
+        return;
+      }
+      spaces_.Add(other.spaces_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            spaces_.AddEntriesFrom(input, _repeated_spaces_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            spaces_.AddEntriesFrom(ref input, _repeated_spaces_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemoveTaskRequest : pb::IMessage<RemoveTaskRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3059,7 +3604,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3257,7 +3802,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3455,7 +4000,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3653,7 +4198,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3851,7 +4396,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4086,7 +4631,7 @@ namespace TasksManagmentService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::TasksManagmentService.TaskManagementServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
